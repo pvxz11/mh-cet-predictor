@@ -1,0 +1,55 @@
+college_name,branch,district,category,gender,cap_round,cutoff_percentile,year
+College of Engineering Pune (COEP),Computer Engineering,Pune,OPEN,ALL,1,99.12,2024
+College of Engineering Pune (COEP),Computer Engineering,Pune,OBC,ALL,1,98.45,2024
+College of Engineering Pune (COEP),Computer Engineering,Pune,SC,ALL,1,94.20,2024
+College of Engineering Pune (COEP),Computer Engineering,Pune,ST,ALL,1,88.10,2024
+College of Engineering Pune (COEP),Electronics & Telecommunication,Pune,OPEN,ALL,1,97.80,2024
+College of Engineering Pune (COEP),Electronics & Telecommunication,Pune,OBC,ALL,1,96.50,2024
+College of Engineering Pune (COEP),Mechanical Engineering,Pune,OPEN,ALL,1,95.30,2024
+College of Engineering Pune (COEP),Mechanical Engineering,Pune,OBC,ALL,1,93.10,2024
+VJTI Mumbai,Computer Engineering,Mumbai,OPEN,ALL,1,99.05,2024
+VJTI Mumbai,Computer Engineering,Mumbai,OBC,ALL,1,97.80,2024
+VJTI Mumbai,Computer Engineering,Mumbai,SC,ALL,1,93.40,2024
+VJTI Mumbai,Electronics & Telecommunication,Mumbai,OPEN,ALL,1,98.20,2024
+VJTI Mumbai,Mechanical Engineering,Mumbai,OPEN,ALL,1,96.70,2024
+PICT Pune,Computer Engineering,Pune,OPEN,ALL,1,96.50,2024
+PICT Pune,Computer Engineering,Pune,OBC,ALL,1,94.30,2024
+PICT Pune,Computer Engineering,Pune,SC,ALL,1,88.60,2024
+PICT Pune,Information Technology,Pune,OPEN,ALL,1,95.20,2024
+PICT Pune,Information Technology,Pune,OBC,ALL,1,93.00,2024
+PICT Pune,Electronics & Telecommunication,Pune,OPEN,ALL,1,93.80,2024
+Cummins College,Computer Engineering,Pune,OPEN,Female,1,94.10,2024
+Cummins College,Computer Engineering,Pune,OBC,Female,1,91.40,2024
+Cummins College,Information Technology,Pune,OPEN,Female,1,93.20,2024
+Cummins College,Electronics & Telecommunication,Pune,OPEN,Female,1,91.80,2024
+MIT College of Engineering,Computer Engineering,Pune,OPEN,ALL,1,93.50,2024
+MIT College of Engineering,Computer Engineering,Pune,OBC,ALL,1,91.00,2024
+MIT College of Engineering,Information Technology,Pune,OPEN,ALL,1,92.30,2024
+MIT College of Engineering,Mechanical Engineering,Pune,OPEN,ALL,1,88.50,2024
+Pune Institute of Computer Technology,Computer Engineering,Pune,OPEN,ALL,1,96.50,2024
+SPPU JSPM,Computer Engineering,Pune,OPEN,ALL,1,85.20,2024
+SPPU JSPM,Computer Engineering,Pune,OBC,ALL,1,82.00,2024
+SPPU JSPM,Information Technology,Pune,OPEN,ALL,1,83.50,2024
+SPPU JSPM,Information Technology,Pune,OBC,ALL,1,80.10,2024
+SPPU JSPM,Electronics & Telecommunication,Pune,OPEN,ALL,1,79.80,2024
+Walchand College of Engineering,Computer Engineering,Sangli,OPEN,ALL,1,92.40,2024
+Walchand College of Engineering,Computer Engineering,Sangli,OBC,ALL,1,89.60,2024
+Walchand College of Engineering,Electronics & Telecommunication,Sangli,OPEN,ALL,1,88.70,2024
+Walchand College of Engineering,Mechanical Engineering,Sangli,OPEN,ALL,1,85.40,2024
+SGGS Institute of Engineering,Computer Engineering,Nanded,OPEN,ALL,1,88.00,2024
+SGGS Institute of Engineering,Computer Engineering,Nanded,OBC,ALL,1,84.50,2024
+Govt. College of Engineering Aurangabad,Computer Engineering,Aurangabad,OPEN,ALL,1,90.50,2024
+Govt. College of Engineering Aurangabad,Computer Engineering,Aurangabad,OBC,ALL,1,87.30,2024
+Govt. College of Engineering Aurangabad,Electronics & Telecommunication,Aurangabad,OPEN,ALL,1,88.10,2024
+KIT College of Engineering,Computer Engineering,Kolhapur,OPEN,ALL,1,87.50,2024
+KIT College of Engineering,Computer Engineering,Kolhapur,OBC,ALL,1,84.00,2024
+KIT College of Engineering,Information Technology,Kolhapur,OPEN,ALL,1,85.20,2024
+DY Patil College of Engineering,Computer Engineering,Pune,OPEN,ALL,1,88.00,2024
+DY Patil College of Engineering,Computer Engineering,Pune,OBC,ALL,1,84.60,2024
+DY Patil College of Engineering,Information Technology,Pune,OPEN,ALL,1,86.30,2024
+Symbiosis Institute of Technology,Computer Engineering,Pune,OPEN,ALL,1,91.00,2024
+Symbiosis Institute of Technology,Computer Engineering,Pune,OBC,ALL,1,88.00,2024
+Symbiosis Institute of Technology,Information Technology,Pune,OPEN,ALL,1,89.50,2024
+COEP,Computer Engineering,Pune,OPEN,ALL,2,98.90,2024
+PICT Pune,Computer Engineering,Pune,OPEN,ALL,2,96.10,2024
+MIT College of Engineering,Computer Engineering,Pune,OPEN,ALL,2,92.80,2024
