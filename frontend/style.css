@@ -1,0 +1,348 @@
+/* ── Reset ───────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:          #b8b4c8;      /* muted lavender-grey — the grid background */
+  --grid-line:   #9490aa;      /* slightly darker for grid lines */
+  --blob-dark:   #2d2d5e;      /* deep navy — top-right blob */
+  --blob-mid:    #4a4875;      /* medium purple — left blob */
+  --blob-soft:   #5c5880;      /* dusty purple — bottom blob */
+  --ring:        rgba(180,176,200,0.6);  /* translucent ring strokes */
+
+  --card:        rgba(255,255,255,0.92);
+  --ink:         #1e1c2e;
+  --ink-light:   #5a5870;
+  --border:      rgba(180,176,200,0.5);
+  --accent:      #2d2d5e;      /* same navy as top blob */
+  --accent-hover:#1a1a40;
+
+  --safe:        #1a6644;   --safe-bg:    #dff2ea;
+  --good:        #1a4a8a;   --good-bg:    #ddeaf9;
+  --stretch:     #7a4400;   --stretch-bg: #fdefd8;
+
+  --radius: 14px;
+  --font-serif: 'DM Serif Display', Georgia, serif;
+  --font-sans:  'Inter', system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-sans);
+  background: #f0eef8;
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ── HERO ─────────────────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  min-height: 100vh;          /* full screen height — no image needed */
+  background-color: var(--bg);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* the grid — pure CSS, matches the Pinterest image exactly */
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+/* ── BLOBS ────────────────────────────────────────────────────────── */
+.blob {
+  position: absolute;
+  border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%;
+}
+
+/* top-right dark navy blob */
+.blob-top-right {
+  width: 38vw;
+  height: 36vw;
+  max-width: 520px;
+  max-height: 480px;
+  background: var(--blob-dark);
+  top: -12%;
+  right: -8%;
+  border-radius: 50% 40% 60% 38% / 45% 55% 40% 58%;
+}
+
+/* left medium blob */
+.blob-left {
+  width: 22vw;
+  height: 50vh;
+  max-width: 300px;
+  background: var(--blob-mid);
+  left: -6%;
+  top: 22%;
+  border-radius: 40% 60% 55% 45% / 60% 40% 55% 45%;
+}
+
+/* bottom-center soft blob */
+.blob-bottom-center {
+  width: 32vw;
+  height: 28vw;
+  max-width: 440px;
+  max-height: 360px;
+  background: var(--blob-soft);
+  bottom: -14%;
+  left: 28%;
+  border-radius: 55% 45% 40% 60% / 48% 52% 48% 52%;
+}
+
+/* ── RINGS (the outline-only oval shapes) ─────────────────────────── */
+.blob-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1.5px solid var(--ring);
+  background: transparent;
+}
+
+.blob-ring-left {
+  width: 18vw;
+  height: 36vh;
+  max-width: 240px;
+  left: 1%;
+  top: 20%;
+}
+
+.blob-ring-bottom {
+  width: 28vw;
+  height: 20vw;
+  max-width: 380px;
+  bottom: -6%;
+  right: 8%;
+  border-radius: 45% 55% 50% 50% / 50% 50% 50% 50%;
+}
+
+/* ── HERO TEXT ────────────────────────────────────────────────────── */
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(30,28,46,0.55);
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 5.5vw, 4rem);
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.hero-sub {
+  font-size: 0.9rem;
+  color: rgba(30,28,46,0.55);
+  letter-spacing: 0.03em;
+}
+
+/* ── FORM ─────────────────────────────────────────────────────────── */
+main { max-width: 860px; margin: 0 auto; padding: 0 1.5rem; }
+
+.form-section {
+  margin: -2.5rem 0 2.5rem;
+  position: relative;
+  z-index: 20;
+}
+
+.form-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem 2.5rem 2.5rem;
+  box-shadow: 0 8px 40px rgba(45,45,94,0.12);
+  backdrop-filter: blur(8px);
+}
+
+.form-heading {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  color: var(--ink);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem 1.5rem;
+  margin-bottom: 1.8rem;
+}
+
+.field { display: flex; flex-direction: column; gap: 0.35rem; }
+
+label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ink-light);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.optional { font-weight: 400; text-transform: none; color: #aaa; }
+
+input, select {
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  color: var(--ink);
+  background: rgba(184,180,200,0.12);
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  padding: 0.55rem 0.75rem;
+  outline: none;
+  transition: border-color 0.15s, background 0.15s;
+  width: 100%;
+}
+
+input:focus, select:focus {
+  border-color: var(--accent);
+  background: #fff;
+}
+
+.predict-btn {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.78rem 2.2rem;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+  letter-spacing: 0.02em;
+}
+
+.predict-btn:hover  { background: var(--accent-hover); }
+.predict-btn:active { transform: scale(0.98); }
+
+/* ── RESULTS ──────────────────────────────────────────────────────── */
+.results-section { padding-bottom: 4rem; }
+
+.results-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.results-header h2 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.results-count { font-size: 0.82rem; color: var(--ink-light); font-weight: 500; }
+
+.legend {
+  font-size: 0.78rem;
+  color: var(--ink-light);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+}
+.badge.safe    { background: var(--safe-bg);    color: var(--safe); }
+.badge.good    { background: var(--good-bg);    color: var(--good); }
+.badge.stretch { background: var(--stretch-bg); color: var(--stretch); }
+
+/* ── COLLEGE CARDS ────────────────────────────────────────────────── */
+.results-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.college-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.2rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+
+.college-card:hover {
+  box-shadow: 0 6px 24px rgba(45,45,94,0.12);
+  transform: translateY(-2px);
+}
+
+.card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; }
+
+.college-name {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+.card-meta { font-size: 0.78rem; color: var(--ink-light); }
+.card-meta span { margin-right: 0.5rem; }
+
+.cutoff-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.25rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--border);
+}
+
+.cutoff-label { font-size: 0.72rem; color: var(--ink-light); }
+.cutoff-value { font-size: 1rem; font-weight: 600; color: var(--ink); }
+
+.no-results {
+  text-align: center;
+  color: var(--ink-light);
+  padding: 2.5rem 0;
+}
+
+/* ── FOOTER ───────────────────────────────────────────────────────── */
+.footer {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--ink-light);
+  padding: 2rem 1.5rem;
+  border-top: 1px solid var(--border);
+}
+.footer a { color: var(--accent); text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+
+/* ── RESPONSIVE ───────────────────────────────────────────────────── */
+@media (max-width: 680px) {
+  .form-card { padding: 1.5rem 1.25rem; }
+  .form-grid { grid-template-columns: 1fr 1fr; }
+  .results-grid { grid-template-columns: 1fr; }
+  .hero-title { font-size: 2rem; }
+}
+
+@media (max-width: 440px) {
+  .form-grid { grid-template-columns: 1fr; }
+}

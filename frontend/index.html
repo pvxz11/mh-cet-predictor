@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MH-CET College Predictor 2024</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+  <!-- ── HERO ─────────────────────────────────────────────────── -->
+  <section class="hero">
+
+    <!-- grid background is CSS, blobs are divs -->
+    <div class="blob blob-top-right"></div>
+    <div class="blob blob-left"></div>
+    <div class="blob blob-bottom-center"></div>
+    <div class="blob-ring blob-ring-left"></div>
+    <div class="blob-ring blob-ring-bottom"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">⋆˚࿔ college list maker for cet ⋆˚࿔</p>
+      <h1 class="hero-title">Find the colleges<br/>for your percentile.</h1>
+      <p class="hero-sub">‧₊˚ To predict eligible colleges ₊˚ෆ</p>
+    </div>
+  </section>
+
+  <!-- ── FORM ──────────────────────────────────────────────────── -->
+  <main>
+    <section class="form-section">
+      <div class="form-card">
+        <h2 class="form-heading">Check your options</h2>
+
+        <div class="form-grid">
+          <div class="field">
+            <label for="percentile">Your MHT-CET Percentile</label>
+            <input type="number" id="percentile" placeholder="e.g. 87.5" min="0" max="100" step="0.01" />
+          </div>
+
+          <div class="field">
+            <label for="category">Category</label>
+            <select id="category"><option value="">Loading…</option></select>
+          </div>
+
+          <div class="field">
+            <label for="gender">Gender</label>
+            <select id="gender">
+              <option value="ALL">All</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="cap_round">CAP Round</label>
+            <select id="cap_round">
+              <option value="1">Round 1</option>
+              <option value="2">Round 2</option>
+              <option value="3">Round 3</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="district">District <span class="optional">(optional)</span></label>
+            <select id="district"><option value="">All districts</option></select>
+          </div>
+
+          <div class="field">
+            <label for="branch">Branch <span class="optional">(optional)</span></label>
+            <select id="branch"><option value="">All branches</option></select>
+          </div>
+        </div>
+
+        <button class="predict-btn" onclick="predict()">Show colleges →</button>
+      </div>
+    </section>
+
+    <!-- ── RESULTS ───────────────────────────────────────────────── -->
+    <section class="results-section" id="results-section" style="display:none">
+      <div class="results-header">
+        <h2 id="results-title">Results</h2>
+        <span id="results-count" class="results-count"></span>
+      </div>
+
+      <div class="legend">
+        <span class="badge safe">Safe</span> cutoff ≥ 3 pts below yours &nbsp;
+        <span class="badge good">Good</span> cutoff within your score &nbsp;
+        <span class="badge stretch">Stretch</span> slightly above (buffer zone)
+      </div>
+
+      <div id="results-grid" class="results-grid"></div>
+      <p id="no-results" class="no-results" style="display:none">No colleges found. Try changing filters.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Data sourced from DTE Maharashtra / CETCELL CAP rounds. Always verify on
+    <a href="https://cetcell.mahacet.org" target="_blank">cetcell.mahacet.org</a>.
+  </footer>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
